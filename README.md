@@ -1,4 +1,4 @@
-# SEI Project Two-Yu-Gi-Oh! 
+# SEI Project Two: Yu-Gi-Oh! 
 
 ## Table of Contents:
 
@@ -14,37 +14,36 @@
 |    8     | **`Key Learning`**|
 
  ## 1. Project Overview
-Space Invaders is a classic arcade game from the 80s. The player aims to shoot laser beams at the invading alien armada, before it reaches the planet's surface using a mounted gun turret. The player can only move left or right. The aliens also move from left to right, and also move down each time they reach the side of the screen. The aliens also periodically drop bombs towards the player.
-
-I wanted to create a similar game but sought to modernise it by using better images for the spaceship and aliens and laser beams. The aim was to create the nostalgic feel for the game but with better graphics and music. 
+Project two was an opportunity to work as a pair to **build a React application** that consumes a **public API**. My patner and I both had to decide on a common theme for the propject using the public API options we had. We both made a list of interests we had and from that we both had a common interest in Yu-Gi-Oh and decided to use the Yu-Gi-Oh API to build a card trading website.
 
 #### See the full website here: [*CLICK ME!*](https://isaac-kumar-yugioh.netlify.app/)
 
-
 ### Resources:
-> If you don't know what space invaders is, then the following links will help you understand the game better:
-> 1. [Space Invaders 1978 - Arcade Gameplay - Youtube](https://www.youtube.com/watch?v=MU4psw3ccUI)
-> 2. [Space Invaders - Wikipedia](https://en.wikipedia.org/wiki/Space_Invaders)
-
+> The following websites assisted with this project:
+> 1. [React](https://reactjs.org/)
+> 2. [Some free APIs](https://apilist.fun/)
+> 3. [Some more free APIs](https://github.com/public-apis/public-apis)
+> 4. [Even more free APIs](https://dev.to/camerenisonfire/10-intriguing-public-rest-apis-for-your-next-project-2gbd)
 
 ## 2. Project Brief and Technical Requirements
 
-- 
-- 
-- 
-- 
-- 
-- 
+- **Consume a public API:** - this could be anything but it must make sense for your project
+- **Have several components** 
+- **The app can have a router:** - with several "pages", this is up to you and if it makes sense for your project.
+- **Include wireframes:** - that you designed before building the app.
 
 ## 3. Technologies Used
 
-- Javascript ES6
-- CSS with Animation
-- HTML5
+- React
+- CSS
+- Bulma 
+- Animate.css
 - Git
 - GitHub
 - Google Fonts
 - Fisma- wireframe
+- Insomnia
+
 
 
 ## 4. Project Timeline- 2 Days
