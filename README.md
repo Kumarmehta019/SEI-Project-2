@@ -14,9 +14,11 @@
 |    8     | **`Key Learning`**|
 
  ## 1. Project Overview
-Project two was an opportunity to work as a pair to **build a React application** that consumes a **public API**. My patner and I both had to decide on a common theme for the propject using the public API options we had. We both made a list of interests we had and from that we both had a common interest in Yu-Gi-Oh and decided to use the Yu-Gi-Oh API to build a card trading website.
+This was a pair coding project, where we were briefed to **build a React application** that consumes a **public API**. My coding partner and I both had to decide on a common theme for the project. We both made a list of interests we had and from that we both had a common interest in Yu-Gi-Oh and decided to use the Yu-Gi-Oh API to build a website.
 
-#### See the full website here: 👉🏽👉🏽[*Yu-Gi-Oh!*](https://isaac-kumar-yugioh.netlify.app/) 👈🏽👈🏽
+<img width="1866" alt="Screenshot 2021-12-14 at 16 55 42" src="https://user-images.githubusercontent.com/88886169/146043756-d5f8dc86-e23a-4421-ae6c-d7d6099bf3de.png">
+
+#### Deployed version available here: 👉🏽👉🏽[*Yu-Gi-Oh!*](https://isaac-kumar-yugioh.netlify.app/) 👈🏽👈🏽
 
 ### Resources:
 > The following websites assisted with this project:
@@ -49,6 +51,7 @@ Project two was an opportunity to work as a pair to **build a React application*
 ## 4. Project Timeline- 2 Days
 
 ### Day One:
+
 
 
 ### Day Two:
@@ -88,6 +91,7 @@ Project two was an opportunity to work as a pair to **build a React application*
 - 
 - 
 - 
+
 
 
 
