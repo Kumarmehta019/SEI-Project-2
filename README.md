@@ -29,11 +29,11 @@ This was a pair coding project, where we were briefed to **build a React applica
 
 ## 2. Project Brief and Technical Requirements
 
-- **Consume a public API:**
+- **Consume a public API**
 - **A working application hosted on the browser**
 - **Have several components**
-- **The app can have a router:**
-- **Include wireframes:**
+- **The app can have a router**
+- **Include wireframes**
 
 
 ## 3. Technologies Used
@@ -60,16 +60,15 @@ The first day was spent finding a common interest between my coding partner and 
 
 <img width="1514" alt="Screenshot 2021-12-14 at 17 17 45" src="https://user-images.githubusercontent.com/88886169/146047645-19e09a57-2927-4984-a311-ed6b8d13e365.png">
 
-Once we were comfortable with the dataset it was then time to create a wireframe of the components and how they would all relate to each other. We wanted a homepage with a search functionality as well as three card categories (monster, spell and trap) displaying on different pages. Each card within the selected category would then be clickable so that the user is taken to a seperate page where they can read up on the details of the specific card they clicked on.
+Once we were comfortable with the dataset it was then time to create a wireframe of the components and how they would all relate to each other. We wanted a homepage with a search functionality as well as three card categories (monster, spell and trap) displaying a variety of cards on different pages. Each card within the selected category would then be clickable so that the user is taken to a seperate page where they can read up on the details of the specific card they clicked.
 
 <img width="976" alt="Screenshot 2021-12-14 at 17 32 45" src="https://user-images.githubusercontent.com/88886169/146049877-8d95f00d-38c6-4cd0-856d-d17cb437e0d3.png">
 
+### Getting Started:
+We started coding our project by creating the app using the command `npx create-react-app APP_NAME --template cra-template-ga-ldn`, adding the origin of our repo name to GitHub and pushing up. Then once inside the app we installed `yarn` and then typed in the command `yarn start` to run the server. We then installed `Bulma`, `React Router Dom`, `Axios` and `Animate.css` as these were the dependencies we needed.
 
-### Day One:
+### Creating Components:
 
-
-
-### Day Two:
 
 
 
