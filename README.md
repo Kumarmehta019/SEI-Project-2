@@ -67,9 +67,19 @@ Once we were comfortable with the dataset it was then time to create a wireframe
 ### Getting Started:
 We started coding our project by creating the app using the command `npx create-react-app APP_NAME --template cra-template-ga-ldn`, adding the origin of our repo name to GitHub and pushing up. Then once inside the app we installed `yarn` and then typed in the command `yarn start` to run the server. We then installed `Bulma`, `React Router Dom`, `Axios` and `Animate.css` as these were the dependencies we needed.
 
-### Creating Components:
+### Components:
 
+Once we had installed our dependencies for the project we started building out the different components we needed, as per our wireframe. 
 
+**Navbar:** We used Bulma to assist us in obtaining a Navbar component which we felt was suitable for our website and then began adding the home, random and wishlist buttons. Once these buttons and the background of the Navbar component was designed, we began by chaining a get request to get the three different category of cards. We were then able to create a nested onClick function that firstly randomised a card from one of the three categories and then sent the user to a specific page showing the id of the card. 
+
+<img width="1504" alt="Screenshot 2021-12-14 at 18 08 51" src="https://user-images.githubusercontent.com/88886169/146055427-6f151085-6f19-49a4-8f21-b927092f4414.png">
+
+**Homepage:** We bagan creating the homepage by adding a background using CSS, three buttons (one for each card category) and a search bar. We then built out the homepage by using `Link` import from `react-router-dom` to navigate to the three card category pages. For finishing touches, we added some animations to the buttons.
+
+<img width="1899" alt="Screenshot 2021-12-14 at 18 18 54" src="https://user-images.githubusercontent.com/88886169/146056938-92f152e0-c97c-4036-a61a-00d83f5d4c72.png">
+
+**Monster, Spell & Trap pages:** 
 
 
 
