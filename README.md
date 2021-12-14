@@ -7,7 +7,7 @@
 |    1    | **`Project Overview`**|
 |    2     | **`The Brief and Technical Requirements`**|
 |    3    | **`Technologies Used`**|
-|    4     | **`Project Timeline - 7 Days`**|
+|    4     | **`Project Timeline - 2 Days`**|
 |    5     | **`Bugs`**|
 |    6     | **`Wins and Challenges`**|
 |    7     | **`Future Improvements`**|
@@ -27,8 +27,8 @@ Project two was an opportunity to work as a pair to **build a React application*
 
 ## 2. Project Brief and Technical Requirements
 
-- **Consume a public API:** - this could be anything but it must make sense for your project
-- **Have several components** 
+- **Consume a public API:** - this could be anything but it must make sense for your project.
+- **Have several components** - i.e navbar and homepage.
 - **The app can have a router:** - with several "pages", this is up to you and if it makes sense for your project.
 - **Include wireframes:** - that you designed before building the app.
 
