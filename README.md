@@ -1,4 +1,4 @@
-# SEI Project Two: Yu-Gi-Oh! 
+# SEI Project Two: Yu-Gi-Oh! ![870413-small](https://user-images.githubusercontent.com/88886169/146028341-7bedc6bf-4bc2-4f09-89aa-132bc23eb04b.png)
 
 ## Table of Contents:
 
@@ -16,7 +16,7 @@
  ## 1. Project Overview
 Project two was an opportunity to work as a pair to **build a React application** that consumes a **public API**. My patner and I both had to decide on a common theme for the propject using the public API options we had. We both made a list of interests we had and from that we both had a common interest in Yu-Gi-Oh and decided to use the Yu-Gi-Oh API to build a card trading website.
 
-#### See the full website here: [*CLICK ME!*](https://isaac-kumar-yugioh.netlify.app/)
+#### See the full website here: ![870413-small](https://user-images.githubusercontent.com/88886169/146028341-7bedc6bf-4bc2-4f09-89aa-132bc23eb04b.png)[*CLICK ME!*](https://isaac-kumar-yugioh.netlify.app/) ![870413-small](https://user-images.githubusercontent.com/88886169/146028341-7bedc6bf-4bc2-4f09-89aa-132bc23eb04b.png)
 
 ### Resources:
 > The following websites assisted with this project:
@@ -88,5 +88,6 @@ Project two was an opportunity to work as a pair to **build a React application*
 - 
 - 
 - 
+
 
 
