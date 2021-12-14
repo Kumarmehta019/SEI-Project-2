@@ -29,26 +29,39 @@ This was a pair coding project, where we were briefed to **build a React applica
 
 ## 2. Project Brief and Technical Requirements
 
-- **Consume a public API:** - this could be anything but it must make sense for your project.
-- **Have several components** - i.e navbar and homepage.
-- **The app can have a router:** - with several "pages", this is up to you and if it makes sense for your project.
-- **Include wireframes:** - that you designed before building the app.
+- **Consume a public API:**
+- **A working application hosted on the browser**
+- **Have several components**
+- **The app can have a router:**
+- **Include wireframes:**
+
 
 ## 3. Technologies Used
 
-- React
+- React.js
+- JavaScript (ES6)
+- HTML5
 - CSS
-- Bulma 
+- Bulma- CSS Framework 
 - Animate.css
+- Axios
 - Git
 - GitHub
 - Google Fonts
-- Fisma- wireframe
-- Insomnia
+- Fisma- Wireframe
+- Insomnia- REST Client
+- Yarn
 
 
 
 ## 4. Project Timeline- 2 Days
+
+### Planning:
+The first day was spent finding a common interest between my coding partner and I. It was then a matter of reviewing and breaking down the dataset/type we would receive from the API. The data was tested in Insomnia to make sure the requests were working correctly. We looked into different endpoints to see which one we would need and how we could manipulate them to display on the frontend.
+
+<img width="1514" alt="Screenshot 2021-12-14 at 17 17 45" src="https://user-images.githubusercontent.com/88886169/146047645-19e09a57-2927-4984-a311-ed6b8d13e365.png">
+
+
 
 ### Day One:
 
