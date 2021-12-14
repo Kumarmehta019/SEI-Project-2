@@ -73,11 +73,83 @@ Once we had installed our dependencies for the project we started building out t
 
 **Navbar:** We used Bulma to assist us in obtaining a Navbar component which we felt was suitable for our website and then began adding the home, random and wishlist buttons. Once these buttons and the background of the Navbar component was designed, we began by chaining a get request to get the three different category of cards. We were then able to create a nested onClick function that firstly randomised a card from one of the three categories and then sent the user to a specific page showing the id of the card. 
 
-<img width="1504" alt="Screenshot 2021-12-14 at 18 08 51" src="https://user-images.githubusercontent.com/88886169/146055427-6f151085-6f19-49a4-8f21-b927092f4414.png">
+```
+const NavBar = () => {
+  const history = useHistory()
+  const [cards, setCards] = useState([])
+  const [allCardId, setAllCardId] = useState([])
+  const [hasError, setHasError] = useState(false)
+
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const { data } = await axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?type=Normal%20Monster,spell%20card,trap%20card')
+        // console.log('data', data)
+        setCards(data.data)
+      } catch (err) {
+        console.log(err)
+        setHasError(true)
+      }
+    }
+    getData()
+    
+  }, [])
+
+  function sendToRandom() {
+    {allCardId ?
+      history.push(`/${allCardId.id}`)
+      : 
+      hasError, 'Something went wrong 🆘'
+    }
+    
+  }
+
+  function handleRandom() {
+    const item = [Math.floor(Math.random() * cards.length)]
+    setAllCardId(cards[item])
+    
+    sendToRandom()
+ 
+  }
+```
 
 **Homepage:** We bagan creating the homepage by adding a background using CSS, three buttons (one for each card category) and a search bar. We then built out the homepage by using `Link` import from `react-router-dom` to navigate to the three card category pages. For finishing touches, we added some animations to the buttons.
 
-<img width="1899" alt="Screenshot 2021-12-14 at 18 18 54" src="https://user-images.githubusercontent.com/88886169/146056938-92f152e0-c97c-4036-a61a-00d83f5d4c72.png">
+```
+const Home = () => {
+
+  return (
+    <section className='section' id='hero'>
+      <div className='hero-body'>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <div className='field'>
+          <p className='control has-icons-right'>
+            <input className='input is-medium is-link' type='search' placeholder='Search...' />
+            <span className='icon is-large is-right'>
+              <i className='search'>⏎</i>
+            </span>
+          </p>
+        </div>
+        <div className='has-text-centered' id='buttons'>
+          <Link to='/spells'><button className='button is-success is-medium is-rounded has-text-weight-bold mx-2 has-text-black animate__animated animate__pulse animate__slower animate__infinite'>Spell Cards</button></Link>
+          <Link to='/traps'><button className='button is-danger is-medium is-rounded has-text-weight-bold mx-2 has-text-black animate__animated animate__pulse animate__slower animate__infinite'>Trap Cards</button></Link>
+          <Link to='/monsters'><button className='button is-warning is-medium is-rounded has-text-weight-bold mx-2 has-text-black animate__animated animate__pulse animate__slower animate__infinite'>Monster Cards</button></Link>
+        </div>
+      </div>
+    </section>
+  )
+
+}
+export default Home
+
+```
+
+
 
 **Monster, Spell & Trap pages:** 
 
@@ -115,6 +187,10 @@ Once we had installed our dependencies for the project we started building out t
 - 
 - 
 - 
+
+
+
+
 
 
 
