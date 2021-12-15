@@ -5,7 +5,7 @@
 |  **No:**     | **Content** |
 | -------- | ------- |
 |    1    | **`Project Overview`**|
-|    2     | **`The Brief and Technical Requirements`**|
+|    2     | **`Project Brief and Technical Requirements`**|
 |    3    | **`Technologies Used`**|
 |    4     | **`Project Timeline - 2 Days`**|
 |    5     | **`Bugs`**|
