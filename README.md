@@ -65,7 +65,28 @@ Once we were comfortable with the dataset it was then time to create a wireframe
 <img width="976" alt="Screenshot 2021-12-14 at 17 32 45" src="https://user-images.githubusercontent.com/88886169/146049877-8d95f00d-38c6-4cd0-856d-d17cb437e0d3.png">
 
 ### Getting Started:
-We started coding our project by creating the app using the command `npx create-react-app APP_NAME --template cra-template-ga-ldn`, adding the origin of our repo name to GitHub and pushing up. Then once inside the app we installed `yarn` and then typed in the command `yarn start` to run the server. We then installed `Bulma`, `React Router Dom`, `Axios` and `Animate.css` as these were the dependencies we needed.
+We started coding our project by creating the app using the command `npx create-react-app APP_NAME --template cra-template-ga-ldn`, adding the origin of our repo name to GitHub and pushing up. Then once inside the app we installed `yarn` and then typed in the command `yarn start` to run the server. We then installed `Bulma`, `React-Router-Dom`, `Axios` and `Animate.css` as these were the dependencies we needed.
+
+### Routes:
+The routes to the various pages/components were built using `React` as well as `BrowserRouter`, `Switch` and `Route` from `React-Router-Dom`.
+
+```javascript
+    <BrowserRouter>
+      <NavBar />
+      <Switch>
+        <Route exact path='/' component={Home}/>
+        <Route exact path='/spells' component={SpellIndex}/>
+        <Route exact path='/traps' component={TrapIndex}/>
+        <Route exact path='/monsters' component={MonsterIndex}/>
+        <Route exact path='/wishlist' component={WishList}/>
+        <Route exact path='/:id' component={CardShow}/>
+        
+      </Switch>
+    </BrowserRouter>
+```
+
+
+
 
 ### Components:
 
@@ -73,7 +94,7 @@ Once we had installed our dependencies for the project we started building out t
 
 **Navbar:** We used Bulma to assist us in obtaining a Navbar component which we felt was suitable for our website and then began adding the home, random and wishlist buttons. Once these buttons and the background of the Navbar component was designed, we began by chaining a get request to get the three different category of cards. We were then able to create a nested onClick function that firstly randomised a card from one of the three categories and then sent the user to a specific page showing the id of the card. 
 
-```
+```javascript
 const NavBar = () => {
   const history = useHistory()
   const [cards, setCards] = useState([])
@@ -113,9 +134,9 @@ const NavBar = () => {
   }
 ```
 
-**Homepage:** We bagan creating the homepage by adding a background using CSS, three buttons (one for each card category) and a search bar. We then built out the homepage by using `Link` import from `react-router-dom` to navigate to the three card category pages. For finishing touches, we added some animations to the buttons.
+**Homepage:** We bagan creating the homepage by adding a background using CSS, three buttons (one for each card category) and a search bar. We then built out the homepage by using `Link` import from `React-Router-Dom` to navigate to the three card category pages. For finishing touches, we added some animations to the buttons.
 
-```
+```javascript
 const Home = () => {
 
   return (
@@ -149,49 +170,130 @@ export default Home
 
 ```
 
+**Monster, Spell & Trap pages:** These card category components were created one after another using different API endpoint get requests, they showed all the Yu-Gi-Oh cards based on the category. The data received was then displayed on the corresponding page using the `.map` method on the array of cards. An `IndexMap.js` helpers file was created to store props for how the cards should be displayed and was imported into the component to use for each card category page (rather than repeating the code over and over again).
+
+```javascript
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 
-**Monster, Spell & Trap pages:** 
+const IndexMap = (props) => {
 
+  return (
+    <div key={props.id} className='column is-one-fifth-desktop'>
+      <Link to={`/${props.id}`}>
+        <div className='card'>
+          <div className='card-header has-background-black'>
+            <div className='card-header-title is-centered cardTitle has-text-white is-underlined pl-0 pr-0 pt-3 pb-3 '>{props.name}</div>
+          </div>
+          <div className='card-image animate__animated animate__pulse animate__infinite animate__slower'>
+            <figure className='image is-1'>
+              <img src={props.card_images[0].image_url} alt={props.name} />
+            </figure>
+          </div>
+          <div className='card-content pl-0 pr-0 pt-2 pb-1 has-text-centered has-background-black has-text-white has-text-weight-bold'>
+            <h5 className="price">£ {props.card_prices[0].ebay_price}</h5>
+          </div>
+        </div>
+      </Link>
+    </div>
+  )
+
+}
+export default IndexMap
+```
+<img width="1594" alt="Monster Cards" src="https://user-images.githubusercontent.com/88886169/146175796-062894b8-f491-44d8-a909-b6351510c267.png">
+<img width="1594" alt="Spell Cards" src="https://user-images.githubusercontent.com/88886169/146175810-24040fc8-c1b2-41ff-aa4a-5c9a3bac7c8b.png">
+<img width="1594" alt="Trap Cards" src="https://user-images.githubusercontent.com/88886169/146175815-51e594bd-731f-4b58-b785-b0c38a87b891.png">
+
+**Card Show:** The card show component is a page that would display further information about each card (image, name, description and its price). Buttons to add and remove the card from the user's wishlist were also added. The url for each cocktail was used using the id of the card which we then added to `App.js` as an additional file path route `<Route path="/cocktail/:id">`. We used the id `useParams` from `react-router-dom` to add the id of the card to the API get request and then display this information on the page. We also attempted to add cards to the user's `Wish List` page by creating `add to Wish List`  and `remove from Wish List` buttons. We then created an onclick function on each button that would either add the id of the card or remove the id of the card from local storage. We, unfortuantely, ran out of time to build out the add and remove to Wish List feature.
+
+```javascript
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
+import { useParams, Link } from 'react-router-dom'
+import 'animate.css'
+
+const CardShow = () => {
+
+  const [chosenCard, setChosenCard] = useState(null)
+  const [hasError, setHasError] = useState(false)
+
+  const { id } = useParams()
+
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const { data } = await axios.get(`https://db.ygoprodeck.com/api/v7/cardinfo.php?id=${id}`)
+        setChosenCard(data.data)
+        console.log('Chosen card', chosenCard)
+      } catch (err) {
+        setHasError(true)
+      }
+    }
+    getData()
+
+  }, [id])
+
+  const handleAdd = () => {
+    window.localStorage.setItem(`wishListCard${window.localStorage.length}`, id)
+  }
+
+  const handleRemove = () => {
+    for (let i = 0; i < window.localStorage.length; i++) {
+      const myValue = window.localStorage.getItem(`wishListCard${i}`)
+      if (myValue === id) {
+        window.localStorage.removeItem(`wishListCard${i}`)
+      }
+    }
+  }
+
+```
+
+
+<img width="1581" alt="Card Show" src="https://user-images.githubusercontent.com/88886169/146180806-753afb21-94ff-4fc4-be26-64a72f76a25c.png">
+
+**Wish List:** The Wish List component is a page that displays the user's cards that they have added to the wishlist. Unfortunately, we had run out of time to implement this feature. We wanted the user to have a collection of cards that they had added to the wishlist and there would be a total costs of buying these cards.
+
+**Styling:**
+
+The layout was created using the Bulma framework and with a bit of help from CSS. This really helped to provide the site with continuity and structure across all the pages of the website. Animate.css was used to animate the website and give various functions on the website an asthetically pleasing feel.
 
 
 ## 5. Bugs
 
-- 
-- 
+- The random button doesnt work when you first click on it but when you click on it again, it works.
+- The Wish List on the card show page doesnt work properly, but this may also be due to running out of time.
 
 ## 6. Wins and Challenges
 
 ### Wins:
-- 
-- 
-- 
+
+- Pair Coding - this was my first time pair coding on a project. Isaac and I worked really well together and really played to each others strengths and weaknesses. Having an extra pair of eyes on a project really helps to overcome errors that each of us might have. It also improves your learning on topics/areas you require further development on.
+
+- Functionality- Given the short time we were given, I am amazed at how far we came and what we were able to build. If given more time I wonder how much more we could have built out this website and completed the components we didnt get around to completing.
+
+- React and APIs- Using React and a public API to create a website which displays the information to a user in a fun and asthetically pleasing way.
 
 ### Challenges:
-- 
-- 
+
+- Time - one of the biggest challenge we faced during this project was completing the project to a standard we were both happy with. We were unable to implement the search and the Wish List functionality, which we could have if we were given more time. These however were stretch goals for us as our main purpose was to display the three card categories and individual card show page. 
+
+- Bulma CSS Framework - Figuring out how to use the different components of Bulma and what variations you could make to these took some time to figure out, but it was also a win as we both knew how to use Bulma by the end of the project.
 
 ## 7. Future Improvements
 
-- 
-- 
-- 
-- 
-- 
+- Fix the bugs
+- Make the website mobile responsive
+- complete the Wish List functionality
+- complete the search functionality
 
 
 ## 8. Key Learnings
 
-- 
-- 
-- 
-- 
-- 
-
-
-
-
-
-
+- Learning to use React `useEffect` and `useState` as well as the React-Router-Dom. 
+- Learning to use Bulma CSS Framework
+- Utilising Insomnia to test API endpoints and get requests
+- How to create a wireframe on Figma
 
 
