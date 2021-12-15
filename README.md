@@ -294,6 +294,7 @@ The layout was created using the Bulma framework and with a bit of help from CSS
 - Learning to use React `useEffect` and `useState` as well as the React-Router-Dom. 
 - Learning to use Bulma CSS Framework
 - Utilising Insomnia to test API endpoints and get requests
-- How to create a wireframe on Figma
+- Creating a wireframe on Figma
+- Learning to work as a pair and working around each others schedule
 
 
