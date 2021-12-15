@@ -11,7 +11,7 @@
 |    5     | **`Bugs`**|
 |    6     | **`Wins and Challenges`**|
 |    7     | **`Future Improvements`**|
-|    8     | **`Key Learning`**|
+|    8     | **`Key Learnings`**|
 
  ## 1. Project Overview
 This was a pair coding project, where we were briefed to **build a React application** that consumes a **public API**. My coding partner and I both had to decide on a common theme for the project. We both made a list of interests we had and from that we both had a common interest in Yu-Gi-Oh and decided to use the Yu-Gi-Oh API to build a website.
