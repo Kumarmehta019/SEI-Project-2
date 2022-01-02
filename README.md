@@ -92,7 +92,7 @@ The routes to the various pages/components were built using `React` as well as `
 
 Once we had installed our dependencies for the project we started building out the different components we needed, as per our wireframe. 
 
-**Navbar:** We used Bulma to assist us in obtaining a Navbar component which we felt was suitable for our website and then began adding the home, random and wishlist buttons. Once these buttons and the background of the Navbar component was designed, we began by chaining a get request to get the three different category of cards. We were then able to create a nested onClick function that firstly randomised a card from one of the three categories and then sent the user to a specific page showing the id of the card. 
+**Navbar:** We used Bulma to assist us in obtaining a Navbar component which we felt was suitable for our website and then began adding the home, random and wishlist buttons. Once these buttons and the background of the Navbar component was designed, we began by chaining a get request to get the three different categories of cards. We were then able to create a nested onClick function that first randomised a card from one of the three categories and then sent the user to a specific page showing the id of the card. 
 
 ```javascript
 const NavBar = () => {
@@ -206,7 +206,7 @@ export default IndexMap
 <img width="1594" alt="Spell Cards" src="https://user-images.githubusercontent.com/88886169/146175810-24040fc8-c1b2-41ff-aa4a-5c9a3bac7c8b.png">
 <img width="1594" alt="Trap Cards" src="https://user-images.githubusercontent.com/88886169/146175815-51e594bd-731f-4b58-b785-b0c38a87b891.png">
 
-**Card Show:** The card show component is a page that would display further information about each card (image, name, description and its price). Buttons to add and remove the card from the user's wishlist were also added. The url for each cocktail was used using the id of the card which we then added to `App.js` as an additional file path route `<Route path="/cocktail/:id">`. We used the id `useParams` from `react-router-dom` to add the id of the card to the API get request and then display this information on the page. We also attempted to add cards to the user's `Wish List` page by creating `add to Wish List`  and `remove from Wish List` buttons. We then created an onclick function on each button that would either add the id of the card or remove the id of the card from local storage. We, unfortuantely, ran out of time to build out the add and remove to Wish List feature.
+**Card Show:** The card show component is a page that would display further information about each card (image, name, description and its price). Buttons to add and remove the card from the user's wishlist were also added. The url for each cocktail was used using the id of the card which we then added to `App.js` as an additional file path route `<Route path="/cocktail/:id">`. We used the id `useParams` from `react-router-dom` to add the id of the card to the API get request and then display this information on the page. We also attempted to add cards to the user's `Wish List` page by creating `add to Wish List`  and `remove from Wish List` buttons. We then created an onclick function on each button that would either add the id of the card or remove the id of the card from local storage. We, unfortunately, ran out of time to build out the add and remove to Wish List feature.
 
 ```javascript
 import React, { useEffect, useState } from 'react'
@@ -253,31 +253,31 @@ const CardShow = () => {
 
 <img width="1581" alt="Card Show" src="https://user-images.githubusercontent.com/88886169/146180806-753afb21-94ff-4fc4-be26-64a72f76a25c.png">
 
-**Wish List:** The Wish List component is a page that displays the user's cards that they have added to the wishlist. Unfortunately, we had run out of time to implement this feature. We wanted the user to have a collection of cards that they had added to the wishlist and there would be a total costs of buying these cards.
+**Wish List:** The Wish List component is a page that displays the user's cards that they have added to the wishlist. Unfortunately, we had run out of time to implement this feature. We wanted the user to have a collection of cards that they had added to the wishlist and there would be a total cost of buying these cards.
 
 **Styling:**
 
-The layout was created using the Bulma framework and with a bit of help from CSS. This really helped to provide the site with continuity and structure across all the pages of the website. Animate.css was used to animate the website and give various functions on the website an asthetically pleasing feel.
+The layout was created using the Bulma framework and with a bit of help from CSS. This really helped to provide the site with continuity and structure across all the pages of the website. Animate.css was used to animate the website and give various functions on the website an aesthetically pleasing feel.
 
 
 ## 5. Bugs
 
 - The random button doesnt work when you first click on it but when you click on it again, it works.
-- The Wish List on the card show page doesnt work properly, but this may also be due to running out of time.
+- The Wish List on the card show page doesn't work properly, but this may also be due to running out of time.
 
 ## 6. Wins and Challenges
 
 ### Wins:
 
-- Pair Coding - this was my first time pair coding on a project. Isaac and I worked really well together and really played to each others strengths and weaknesses. Having an extra pair of eyes on a project really helps to overcome errors that each of us might have. It also improves your learning on topics/areas you require further development on.
+- Pair Coding - this was my first time pair coding on a project. Isaac and I worked really well together and really played to each other's strengths and weaknesses. Having an extra pair of eyes on a project really helps to overcome errors that each of us might have. It also improves your learning on topics/areas you require further development on.
 
-- Functionality- Given the short time we were given, I am amazed at how far we came and what we were able to build. If given more time I wonder how much more we could have built out this website and completed the components we didnt get around to completing.
+- Functionality- Given the short time we were given, I am amazed at how far we came and what we were able to build. If given more time I wonder how much more we could have built out this website and completed the components we didn't get around to completing.
 
-- React and APIs- Using React and a public API to create a website which displays the information to a user in a fun and asthetically pleasing way.
+- React and APIs- Using React and a public API to create a website which displays the information to a user in a fun and aesthetically pleasing way.
 
 ### Challenges:
 
-- Time - one of the biggest challenge we faced during this project was completing the project to a standard we were both happy with. We were unable to implement the search and the Wish List functionality, which we could have if we were given more time. These however were stretch goals for us as our main purpose was to display the three card categories and individual card show page. 
+- Time - one of the biggest challenges we faced during this project was completing the project to a standard we were both happy with. We were unable to implement the search and the Wish List functionality, which we could have if we were given more time. These however were stretch goals for us as our main purpose was to display the three card categories and individual card show page. 
 
 - Bulma CSS Framework - Figuring out how to use the different components of Bulma and what variations you could make to these took some time to figure out, but it was also a win as we both knew how to use Bulma by the end of the project.
 
