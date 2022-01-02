@@ -51,7 +51,7 @@ This was a pair coding project, where we were briefed to **build a React applica
 - Git
 - GitHub
 - Google Fonts
-- Fisma- Wireframe
+- Figma- Wireframe
 - Insomnia- REST Client
 - Yarn
 
