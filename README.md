@@ -1,3 +1,6 @@
+
+### README progress... ![90%](https://progress-bar.dev/90)
+
 # SEI Project Two: Yu-Gi-Oh!
 
 ## Table of Contents:
