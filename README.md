@@ -43,7 +43,7 @@ This was a pair coding project, where we were briefed to **build a React applica
 
 - React.js.
 - JavaScript.
-- HTML5.
+- HTML.
 - CSS.
 - Bulma- CSS Framework.
 - Animate.css.
