@@ -17,7 +17,7 @@
 |    8     | **`Key Learnings`**|
 
  ## 1. Project Overview
-This was a pair coding project, where we were briefed to **build a React application** that consumes a **public API**. My coding partner and I both had to decide on a common theme for the project. We both made a list of interests we had and from that we both had a common interest in Yu-Gi-Oh and decided to use the Yu-Gi-Oh API to build a website.
+This was a pair coding project, where we were briefed to **build a React application** that consumes a **public API**. My coding partner (Isaac) and I both had to decide on a common theme for the project. We both made a list of interests we had and from that we both had a common interest in Yu-Gi-Oh and decided to use the Yu-Gi-Oh API to build a website.
 
 <img width="1866" alt="Screenshot 2021-12-14 at 16 55 42" src="https://user-images.githubusercontent.com/88886169/146043756-d5f8dc86-e23a-4421-ae6c-d7d6099bf3de.png">
 
@@ -41,19 +41,19 @@ This was a pair coding project, where we were briefed to **build a React applica
 
 ## 3. Technologies Used
 
-- React.js
-- JavaScript (ES6)
-- HTML5
-- CSS
-- Bulma- CSS Framework 
-- Animate.css
-- Axios
-- Git
-- GitHub
-- Google Fonts
-- Figma- Wireframe
-- Insomnia- REST Client
-- Yarn
+- React.js.
+- JavaScript.
+- HTML5.
+- CSS.
+- Bulma- CSS Framework.
+- Animate.css.
+- Axios.
+- Git.
+- GitHub.
+- Google Fonts.
+- Figma- Wireframe.
+- Insomnia- REST Client.
+- Yarn.
 
 
 ## 4. Project Timeline- 2 Days
@@ -286,18 +286,18 @@ The layout was created using the Bulma framework and with a bit of help from CSS
 
 ## 7. Future Improvements
 
-- Fix the bugs
-- Make the website mobile responsive
-- complete the Wish List functionality
-- complete the search functionality
+- Fix the bugs.
+- Make the website mobile responsive.
+- complete the Wish List functionality.
+- complete the search functionality.
 
 
 ## 8. Key Learnings
 
 - Learning to use React `useEffect` and `useState` as well as the React-Router-Dom. 
-- Learning to use Bulma CSS Framework
-- Utilising Insomnia to test API endpoints and get requests
-- Creating a wireframe on Figma
-- Learning to work as a pair and working around each others schedule
+- Learning to use Bulma CSS Framework.
+- Utilising Insomnia to test API endpoints and get requests.
+- Creating a wireframe on Figma.
+- Learning to work as a pair and working around each other's schedule.
 
 
