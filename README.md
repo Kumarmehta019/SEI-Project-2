@@ -17,7 +17,7 @@
 |    8     | **`Key Learnings`**|
 
  ## 1. Project Overview
-This was a pair coding project, where we were briefed to **build a React application** that consumes a **public API**. My coding partner (Isaac) and I both had to decide on a common theme for the project. We both made a list of interests we had and from that we both had a common interest in Yu-Gi-Oh and decided to use the Yu-Gi-Oh API to build a website.
+This was a pair coding project, where we were briefed to **build a React application** that consumes a **public API**. My coding partner ([*Isaac*](https://github.com/iglfranks)) and I both had to decide on a common theme for the project. We both made a list of interests we had and from that we both had a common interest in Yu-Gi-Oh and decided to use the Yu-Gi-Oh API to build a website.
 
 <img width="1866" alt="Screenshot 2021-12-14 at 16 55 42" src="https://user-images.githubusercontent.com/88886169/146043756-d5f8dc86-e23a-4421-ae6c-d7d6099bf3de.png">
 
